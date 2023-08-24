@@ -2,6 +2,10 @@
 
 import { useRef, useState } from "react";
 
+const regex = new RegExp(
+  "(https://www.|http://www.|https://|http://)?[a-zA-Z]{2,}(.[a-zA-Z]{2,})(.[a-zA-Z]{2,})?/[a-zA-Z0-9]{2,}|((https://www.|http://www.|https://|http://)?[a-zA-Z]{2,}(.[a-zA-Z]{2,})(.[a-zA-Z]{2,})?)|(https://www.|http://www.|https://|http://)?[a-zA-Z0-9]{2,}.[a-zA-Z0-9]{2,}.[a-zA-Z0-9]{2,}(.[a-zA-Z0-9]{2,})? "
+);
+
 export default function Home() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [shortUrl, setShortUrl] = useState<string>("");
@@ -12,6 +16,7 @@ export default function Home() {
     const url = inputRef.current?.value;
 
     if (!url) return;
+    if (!regex.test(url)) return alert("Invalid url");
 
     fetch("/api/shortUrl", {
       method: "POST",
@@ -47,7 +52,7 @@ export default function Home() {
           onSubmit={handleSubmit}
         >
           <input
-            className="w-full border-2 outline-none py-2 px-3 rounded-2xl mb-4 text-black"
+            className="w-full border-2 text-center outline-none py-2 px-3 rounded-2xl mb-4 text-black"
             placeholder="Paste your link"
             type="text"
             ref={inputRef}
