@@ -2,6 +2,21 @@
 
 Este proyecto es un acortador de URL que te permite convertir URLs largas en URLs cortas y fáciles de compartir.
 
+## Tabla de contenidos
+
+- [URL-Shortener](#url-shortener)
+  - [Tabla de contenidos](#tabla-de-contenidos)
+  - [Descripción](#descripción)
+  - [Características](#características)
+  - [Instalación](#instalación)
+  - [Uso](#uso)
+  - [Contribución](#contribución)
+  - [Licencia](#licencia)
+
+## Descripción
+
+Aplicación web que permite acortar URLs largas en enlaces cortos y personalizados, facilitando su compartición y gestión.
+
 ## Características
 
 - Acorta URLs largas en URLs cortas personalizadas.
