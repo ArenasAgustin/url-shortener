@@ -35,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-between p-24 bg-gradient-to-tr from-blue-800 to-purple-700 overflow-hidden relative">
+    <main className="flex h-screen w-screen flex-col items-center justify-between p-24 bg-linear-to-tr from-blue-800 to-purple-700 overflow-hidden relative">
       <div></div>
 
       <div className="relative w-full flex flex-col place-items-center">
@@ -52,13 +52,13 @@ export default function Home() {
           onSubmit={handleSubmit}
         >
           <input
-            className="w-full border-2 text-center outline-none py-2 px-3 rounded-2xl mb-4 text-black"
+            className="w-full border-2 border-gray-200 placeholder:text-gray-400 text-center outline-hidden py-2 px-3 rounded-2xl mb-4 text-black"
             placeholder="Paste your link"
             type="text"
             ref={inputRef}
           />
 
-          <button className="block w-full mt-4 py-2 font-semibold mb-2 text-xl rounded-2xl bg-white text-indigo-800">
+          <button className="block cursor-pointer w-full mt-4 py-2 font-semibold mb-2 text-xl rounded-2xl bg-white text-indigo-800">
             Shorten
           </button>
 
@@ -68,10 +68,10 @@ export default function Home() {
         </form>
       </div>
 
-      <div className="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-      <div className="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-      <div className="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-      <div className="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+      <div className="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-gray-200 border-t-8"></div>
+      <div className="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-gray-200 border-t-8"></div>
+      <div className="absolute -top-40 right-0 w-80 h-80 border-4 rounded-full border-gray-200 border-t-8"></div>
+      <div className="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-gray-200 border-t-8"></div>
 
       <div className="max-w-5xl w-full items-center justify-center font-mono text-sm flex">
         <div className="bottom-0 rigth-0 flex items-end justify-center static h-auto w-auto bg-none">
